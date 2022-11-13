@@ -49,6 +49,8 @@ jobs:
           node-version: "16"
           cache: "npm"
           cache-dependency-path: "**/package-lock.json"
+      - name: Install Docsy Dependencies
+        run: npm install --save-dev autoprefixer && npm install --save-dev postcss-cli && npm install --save-dev fontawesome
       - name: Install Docsy Theme
         run: cd themes && npm install
       - name: Build with Hugo
