@@ -52,7 +52,7 @@ jobs:
       - name: Install Docsy Dependencies
         run: npm install --save-dev autoprefixer && npm install --save-dev postcss-cli && npm install --save-dev postcss && npm install --save-dev fontawesome && npm install --save-dev scss && npm install --save-dev bootstrap
       - name: Install Docsy Theme
-        run: cd themes && npm install
+        run: cd themes/docsy && npm install
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
