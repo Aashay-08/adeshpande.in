@@ -43,6 +43,14 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: Install Docsy Theme
+        run: cd themes && npm install
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
